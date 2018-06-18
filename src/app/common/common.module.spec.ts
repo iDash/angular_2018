@@ -1,4 +1,4 @@
-import {CommonModule} from './common.module';
+import { CommonModule } from './common.module';
 
 describe('CommonModule', () => {
   let commonModule: CommonModule;
