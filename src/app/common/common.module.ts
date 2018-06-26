@@ -10,9 +10,6 @@ const CORE_COMPONENTS = [
 ];
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
   declarations: [
     ...CORE_COMPONENTS
   ],
