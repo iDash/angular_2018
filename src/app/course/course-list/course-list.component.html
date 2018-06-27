@@ -1,3 +1,14 @@
-<div class="container-fluid">
-  <app-course-list-item *ngFor="let course of courses" [course]="course"></app-course-list-item>
+<div class="course-container">
+  <div class="course-item">
+    <mat-card class="button-card">
+
+      <mat-card-content>
+        <mat-icon>add</mat-icon>
+        add course
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <app-course-list-item class="course-item" *ngFor="let course of courses"
+                        [course]="course"
+                        (deleteEvent)='deleteCourse($event)'></app-course-list-item>
 </div>

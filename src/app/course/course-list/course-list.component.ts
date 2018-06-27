@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Course } from '../../model/course';
 
 @Component({
   selector: 'app-course-list',
   templateUrl: './course-list.component.html',
-  styleUrls: [ './course-list.component.css' ]
+  styleUrls: [ './course-list.component.scss' ]
 })
 export class CourseListComponent implements OnInit {
+  @Output() deleteEvent = new EventEmitter<number>();
+
   public courses: Course[] = [
     {
       id: 1,
@@ -51,4 +53,7 @@ export class CourseListComponent implements OnInit {
   ngOnInit() {
   }
 
+  deleteCourse(courseId: number) {
+    this.deleteEvent.emit(courseId);
+  }
 }

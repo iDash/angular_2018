@@ -1,3 +1,3 @@
-<div class="container-fluid">
-  <app-course-list></app-course-list>
-</div>
+<app-course-search (searchEvent)='search($event)'></app-course-search>
+<app-course-list (deleteEvent)='deleteCourse($event)'></app-course-list>
+<button mat-button (click)='loadMore();'>Load more</button>

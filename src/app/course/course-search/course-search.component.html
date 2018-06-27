@@ -1,0 +1,8 @@
+<form class="course-search">
+  <mat-form-field class="form-search">
+    <input matInput [(ngModel)]="textToSearch" name="searchString" placeholder="Text to search">
+  </mat-form-field>
+  <button mat-icon-button class="search-button" (click)="search()">
+    <mat-icon>search</mat-icon>
+  </button>
+</form>
